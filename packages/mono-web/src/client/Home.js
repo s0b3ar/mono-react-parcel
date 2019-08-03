@@ -6,6 +6,6 @@ export default () => (
   <Fragment>
     <Header />
     <div>Body text</div>
-    <Button>Click ME</Button>
+    <Button green>Click ME</Button>
   </Fragment>
 )
