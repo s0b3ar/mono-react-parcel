@@ -5,15 +5,30 @@
   "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "mono-components": "1.0.0",
+    "morgan": "^1.9.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-cookie": "^4.0.1",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4",
+    "universal-cookie-express": "^4.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "nodemon": "^1.19.1",
     "parcel-bundler": "^1.12.3",
     "postcss-modules": "^1.4.1"
   },
   "scripts": {
-    "dev": "parcel src/client/index.html --no-cache"
+    "dev": "parcel src/client/index.html --no-cache",
+    "ssr": "nodemon --exec 'babel-node src/server/index.js'"
   }
 }
