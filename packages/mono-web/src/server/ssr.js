@@ -20,13 +20,11 @@ export default async (req, res, next) => {
   const preloadedState = {}
 
   const markup = ReactDOMServer.renderToString(
-    <Provider store={store}>
-      <CookiesProvider cookies={req.universalCookies}>
-        <Router location={req.url} context={context}>
-          <Home />
-        </Router>
-      </CookiesProvider>
-    </Provider>
+    <CookiesProvider cookies={req.universalCookies}>
+      <Router location={req.url} context={context}>
+        <Home />
+      </Router>
+    </CookiesProvider>
   )
 
   if (context.url) {

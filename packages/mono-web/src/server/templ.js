@@ -10,7 +10,7 @@ export default ({ markup, preloadedState }) => {
       ${helmet.title.toString()}
       ${helmet.meta.toString()}
       ${helmet.link.toString()}
-      <link rel="stylesheet" href="/app.css"></head>
+      <link rel="stylesheet" href="dist/app.css"></head>
     </head>
     <body ${helmet.bodyAttributes.toString()} >
     
@@ -19,7 +19,7 @@ export default ({ markup, preloadedState }) => {
       <script>
         window.__INIT_DATA_FROM_SERVER_RENDER__ = ${JSON.stringify(preloadedState)};
       </script>
-      <script src="/bundles/index.js"></script>
+      <script src="/dist/index.js"></script>
     </body>
   </html> 
   `
