@@ -20,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
@@ -34,7 +35,7 @@
     "postcss-modules": "^1.4.1"
   },
   "scripts": {
-    "dev": "NODE_ENV=development parcel watch src/client/app.js --no-cache --out-dir=dist --log-level=3",
+    "dev": "BABEL_DISABLE_CACHE=1 NODE_ENV=development parcel watch src/client/app.js --no-cache --out-dir=dist --log-level=3",
     "ssr": "concurrently 'yarn dev' 'BABEL_DISABLE_CACHE=1 node src/server/index_node.js'"
   }
 }
