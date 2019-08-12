@@ -39,7 +39,8 @@
     ]
   },
   "scripts": {
-    "dev": "BABEL_DISABLE_CACHE=1 NODE_ENV=development parcel watch src/client/app.js --no-cache --out-dir=dist --log-level=3",
-    "ssr": "concurrently 'yarn dev' 'BABEL_DISABLE_CACHE=1 node src/server/index_node.js'"
+    "parcel:dev": "NODE_ENV=development parcel watch src/client/app.js --no-cache --log-level=3 --public-url /dist",
+    "server:dev": "NODE_ENV=development node src/server/index_node.js",
+    "start:dev": "concurrently 'yarn parcel:dev' 'yarn server:dev'"
   }
 }
