@@ -33,6 +33,11 @@
     "parcel-bundler-patch": "^1.12.3",
     "postcss-modules": "^1.4.1"
   },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
   "scripts": {
     "dev": "BABEL_DISABLE_CACHE=1 NODE_ENV=development parcel watch src/client/app.js --no-cache --out-dir=dist --log-level=3",
     "ssr": "concurrently 'yarn dev' 'BABEL_DISABLE_CACHE=1 node src/server/index_node.js'"
