@@ -3,7 +3,14 @@ require('@babel/register')({
   plugins: [
     '@babel/plugin-syntax-dynamic-import',
     'babel-plugin-dynamic-import-node',
-    '@babel/plugin-transform-runtime'
+    '@babel/plugin-transform-runtime',
+    [
+      'babel-plugin-css-modules-transform',
+      {
+        extensions: ['.css'],
+        generateScopedName: '../../generateScopedNames.js'
+      }
+    ],
   ],
   extensions: ['.js', '.jsx'],
   ignore: [

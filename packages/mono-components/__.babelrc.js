@@ -12,6 +12,6 @@ module.exports = {
         generateScopedName: '../../generateScopedNames.js'
       }
     ],
-    '@babel/plugin-transform-runtime'
+    // '@babel/plugin-transform-runtime'
   ]
 }
