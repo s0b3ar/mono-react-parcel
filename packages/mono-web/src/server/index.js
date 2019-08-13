@@ -5,7 +5,7 @@ import cookiesMiddleware from 'universal-cookie-express'
 import ssrMiddleware from './ssr'
 
 const app = express()
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 8081
 
 app.use(morgan('tiny'))
 app.use('/dist', express.static(path.resolve(__dirname, '../../dist')))
